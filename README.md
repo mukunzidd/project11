@@ -1,2 +1,5 @@
 # project11
-Some description
+
+A cool Todo App
+
+> Made in haste by Cycle11ers
