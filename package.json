@@ -1,0 +1,34 @@
+{
+  "name": "project11",
+  "version": "1.0.0",
+  "description": "A cool Todo App",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node server/index.js",
+    "lint": "eslint server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukunzidd/project11.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mukunzidd/project11/issues"
+  },
+  "homepage": "https://github.com/mukunzidd/project11#readme",
+  "dependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.2"
+  }
+}
