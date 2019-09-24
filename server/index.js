@@ -66,7 +66,7 @@ app.put('/todos/:id', (req, res) => {
   const { body } = req;
 
   const updatedTodo = {
-    id: body.id || matchTodo.id,
+    id: parseInt(body.id, 10) || matchTodo.id,
     title: body.title || matchTodo.title,
     completed: body.completed || matchTodo.completed,
     priority: body.priority || matchTodo.priority,
