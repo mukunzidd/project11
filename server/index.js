@@ -72,3 +72,5 @@ app.listen(process.env.PORT, () => {
   // eslint-disable-next-line no-console
   console.log(`App running on PORT: ${process.env.PORT}`);
 });
+
+export default app;

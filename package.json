@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node server/index.js",
+    "test": "mocha server/tests/*.spec.js --require @babel/register --exit",
     "lint": "eslint server"
   },
   "repository": {
@@ -18,17 +19,21 @@
   },
   "homepage": "https://github.com/mukunzidd/project11#readme",
   "dependencies": {
-    "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
-    "@babel/node": "^7.6.1",
-    "@babel/preset-env": "^7.6.0",
     "dotenv": "^8.1.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/register": "^7.6.2",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "eslint": "^6.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.0",
     "nodemon": "^1.19.2"
   }
 }
