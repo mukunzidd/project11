@@ -50,7 +50,36 @@ app.delete('/todos/:id', (req, res) => {
   res.sendStatus(204);
 });
 
-// HOMEWORK: create a route to modify one todo
+// HOMEWORK: solved below
+
+app.put('/todos/:id', (req, res) => {
+  const matchTodo = todos.find((todo) => todo.id === parseInt(req.params.id, 10));
+
+  if (!matchTodo) {
+    res.status(404).json({
+      status: 404,
+      error: 'Todo not found',
+    });
+  }
+  const index = todos.indexOf(matchTodo);
+
+  const { body } = req;
+
+  const updatedTodo = {
+    id: body.id || matchTodo.id,
+    title: body.title || matchTodo.title,
+    completed: body.completed || matchTodo.completed,
+    priority: body.priority || matchTodo.priority,
+  };
+
+  todos.splice(index, 1, updatedTodo);
+
+  res.status(200).json({
+    status: 200,
+    message: 'Todo updated successfully',
+    data: todos[index],
+  });
+});
 
 app.post('/todos', (req, res) => {
   const todo = {
