@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node server/index.js",
-    "test": "mocha server/tests/*.spec.js --require @babel/register --exit",
+    "test": "nyc --reporter=text --reporter=lcov mocha server/tests/*.spec.js --require @babel/register --timeout=30000 --exit",
     "lint": "eslint server",
-    "coverage": "nyc yarn test && nyc report --reporter=text-lcov | coveralls"
+    "coverage": "yarn test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
