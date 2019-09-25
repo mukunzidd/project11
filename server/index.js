@@ -51,6 +51,30 @@ app.delete('/todos/:id', (req, res) => {
 });
 
 // HOMEWORK: create a route to modify one todo
+app.patch('/todos/:todoId', (req, res)=>{
+  const todoId = parseInt(req.params.todoId, 10);
+  const updatedTodo = req.body;
+
+  for(let todo of todos){
+    if(todo.id === todoId){
+      todo.id        = parseInt(updatedTodo.id, 10)    || todo.id;
+      todo.title     = updatedTodo.title || todo.title;
+      todo.completed = updatedTodo.completed || todo.completed;
+      todo.priority  = updatedTodo.priority || todo.priority;
+
+      return res.status(200).json({
+        status: 200,
+        message: 'todo updated successfully',
+        data: todo
+      });
+    }
+  }
+
+    res.status(404).json({
+      status: 404,
+      message: 'No found with the given id'
+    });
+});
 
 app.post('/todos', (req, res) => {
   const todo = {
