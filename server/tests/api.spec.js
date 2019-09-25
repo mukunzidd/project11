@@ -8,7 +8,7 @@ describe('Todo Controller', () => {
   it('GET /todos', () => {
     chai
       .request(app)
-      .post('/todos')
+      .get('/todos')
       .end((err, res) => {
         expect(res.status).to.equals(200);
         expect(res.body.message).to.be.a('string');
