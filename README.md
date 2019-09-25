@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/mukunzidd/project11.svg?branch=develop)](https://travis-ci.org/mukunzidd/project11)
+[![Coverage Status](https://coveralls.io/repos/github/mukunzidd/project11/badge.svg?branch=develop)](https://coveralls.io/github/mukunzidd/project11?branch=develop)
+
 # project11
 
 A cool Todo App
