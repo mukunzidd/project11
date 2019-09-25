@@ -31,7 +31,7 @@ app.get('/todos', (req, res) => {
 });
 
 app.get('/todos/:id', (req, res) => {
-    const matchTodo = todos.find((todo) => todo.id === parseInt(req.params.id, 10));
+    const matchTodo = todos.find(todo => todo.id === parseInt(req.params.id, 10));
     if (matchTodo) {
         res.status(200).json({
             status: 200,
@@ -44,19 +44,16 @@ app.get('/todos/:id', (req, res) => {
 
 app.delete('/todos/:id', (req, res) => {
     const id = parseInt(req.params.id, 10);
-    // eslint-disable-next-line no-shadow
-    const todo = todos.find((todo) => todo.id === id);
+    const todo = todos.find(todo => todo.id === id);
     todos.splice(todos.indexOf(todo), 1);
     res.sendStatus(204);
 });
 
 // HOMEWORK: create a route to modify one todo
-// eslint-disable-next-line no-unused-vars
+
 app.patch('/todos/:id', (req, res) => {
     const id = parseInt(req.params.id, 10);
-    // eslint-disable-next-line max-len
     const matchTodo = todos.find((todo) => todo.id === id);
-    // eslint-disable-next-line no-unused-vars
     const todo = {
         title: req.body.title,
         priority: parseInt(req.body.priority, 10),
@@ -71,7 +68,7 @@ app.patch('/todos/:id', (req, res) => {
 
             res.status(200).json({
                 status: 200,
-                message: 'Change Article',
+                message: 'Changed article successfully',
                 data: matchTodo,
             });
         }
@@ -97,5 +94,6 @@ app.post('/todos', (req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
+    // eslint-disable-next-line no-console
     console.log(`App running on PORT: ${process.env.PORT}`);
 });
