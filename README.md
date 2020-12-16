@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/mukunzidd/project11.svg?branch=develop)](https://travis-ci.org/mukunzidd/project11)
 [![Coverage Status](https://coveralls.io/repos/github/mukunzidd/project11/badge.svg?branch=develop)](https://coveralls.io/github/mukunzidd/project11?branch=develop)
 [![Maintainability](https://api.codeclimate.com/v1/badges/43f08d1e5880053da637/maintainability)](https://codeclimate.com/github/mukunzidd/project11/maintainability)
+![CodeQL](https://github.com/mukunzidd/project11/workflows/CodeQL/badge.svg)
 
 # project11
 
